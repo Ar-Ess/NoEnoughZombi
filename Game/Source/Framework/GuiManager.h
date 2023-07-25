@@ -29,6 +29,8 @@ public:
 
 	void Debug(bool active);
 
+	void Clear();
+
 private:
 
 	GuiManager(Input* input, Render* Render);

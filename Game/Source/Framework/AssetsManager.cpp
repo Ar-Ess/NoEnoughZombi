@@ -1,7 +1,7 @@
 #include "AssetsManager.h"
 
-#include "physfsrwops.h"
-#include "physfsrwops.c"
+#include "PhysFS/include/physfsrwops.h"
+#include "PhysFS/include/physfsrwops.c"
 #include "Font.h"
 #include "Audio.h"
 #include "Texture.h"

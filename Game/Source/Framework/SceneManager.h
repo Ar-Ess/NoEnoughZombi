@@ -51,5 +51,6 @@ private:
 	Trigger trgUpdate;
 
 	int trgSaveLoad = -1;
+	int trgChangeScene = -1;
 
 };

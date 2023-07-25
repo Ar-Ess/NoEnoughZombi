@@ -12,7 +12,8 @@ template<class ...T> class Action;
 enum class Scenes
 {
 	INITIAL_SCENE,
-	MAIN_MENU_SCENE
+	MAIN_MENU_SCENE,
+	GAME_SCENE
 };
 
 class Scene

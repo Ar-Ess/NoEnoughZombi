@@ -2,7 +2,6 @@
 
 #include "Scene.h"
 #include "Easing.h"
-#include "LightTimer.h"
 
 class Text;
 
@@ -27,7 +26,6 @@ public:
 private:
 
 	Text* logo = nullptr;
-	Easing* logoEase = nullptr;
-	LightTimer timer;
+	Easing logoEase = Easing(EaseType::LINEAR, EaseMode::IN_OUT_MODE, 6);
 
 };

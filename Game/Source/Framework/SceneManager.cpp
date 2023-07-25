@@ -31,7 +31,8 @@ bool SceneManager::Start()
 	bool ret = true;
 
 	PushScene(new InitialScene());
-	ret = ChangeScene(0);
+	ChangeScene(0);
+	ChangeScene(0);
 
 	return ret;
 }
@@ -43,6 +44,8 @@ bool SceneManager::Update(float dt)
 	if (!scenes[currScene]->Update(dt)) !trgUpdate;
 
 	if (!scenes[currScene]->Draw(dt)) !trgUpdate;
+
+	if (trgChangeScene != -1) ChangeScene(trgChangeScene);
 
 	return trgUpdate();
 }
@@ -61,6 +64,14 @@ bool SceneManager::CleanUp()
 bool SceneManager::ChangeScene(int scene)
 {
 	bool ret = true;
+	
+	if (trgChangeScene == -1)
+	{
+		trgChangeScene = scene;
+		return true;
+	}
+
+	trgChangeScene = -1;
 
 	if (currScene > -1 && scene != currScene) ret = scenes[currScene]->CleanUp();
 

@@ -94,6 +94,11 @@ void GuiManager::Debug(bool active)
 	config.Set(0, active);
 }
 
+void GuiManager::Clear()
+{
+	controls.Clear();
+}
+
 bool GuiManager::CleanUp()
 {
 	LOG("Freeing True Type fonts and library");

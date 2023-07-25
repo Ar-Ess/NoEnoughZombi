@@ -1,6 +1,6 @@
 #include "Font.h"
 #include "Maths.h"
-#include "physfsrwops.h"
+#include "PhysFS/include/physfsrwops.h"
 #include "Defs.h"
 #include "Texture.h"
 

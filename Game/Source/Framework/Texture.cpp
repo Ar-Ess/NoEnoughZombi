@@ -1,6 +1,6 @@
 #include "Texture.h"
 
-#include "physfsrwops.h"
+#include "PhysFS/include/physfsrwops.h"
 #include "Defs.h"
 #include "Render.h"
 
