@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2AF9969B-F202-497B-AF30-7BEF9CE8005E}</ProjectGuid>
+    <RootNamespace>Development</RootNamespace>
+    <ProjectName>Game</ProjectName>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v142</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IntDir>$(SolutionDir)Build\$(Configuration)\Obj\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <TargetName>Game_Name</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)Build\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)Build\$(Configuration)\Obj\</IntDir>
+    <TargetName>Game_Name</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;_CRT_SECURE_NO_WARNINGS;WITH_SDL2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ShowIncludes>false</ShowIncludes>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source\External;$(ProjectDir)Source;$(ProjectDir)Source\Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;physfs.lib;SDL2_ttf.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Source\External\SDL\libx86;$(ProjectDir)Source\External\SDL_image\libx86;$(ProjectDir)Source\External\PhysFS\libx86;$(ProjectDir)\Source\External\SDL_ttf\libx86;$(ProjectDir)Source\External\SDL_mixer\libx86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <UseFullPaths>false</UseFullPaths>
+      <ShowIncludes>false</ShowIncludes>
+      <PreprocessorDefinitions>_ITERATOR_DEBUG_LEVEL=0;_CRT_SECURE_NO_WARNINGS;WITH_SDL2;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir)Source\External;$(ProjectDir)Source;$(ProjectDir)Source\Framework;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <SubSystem>Windows</SubSystem>
+      <AdditionalDependencies>SDL2.lib;SDL2main.lib;SDL2_image.lib;physfs.lib;;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>$(ProjectDir)Source\External\SDL\libx86;$(ProjectDir)Source\External\SDL_image\libx86;$(ProjectDir)Source\External\PhysFS\libx86;$(ProjectDir)Source\External\SDL_mixer\libx86</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\monotone\soloud_monotone.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\noise\soloud_noise.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\openmpt\soloud_openmpt.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\openmpt\soloud_openmpt_dll.c" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\sfxr\soloud_sfxr.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\speech\darray.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\speech\klatt.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\speech\resonator.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\speech\soloud_speech.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\speech\tts.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\tedsid\sid.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\tedsid\soloud_tedsid.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\tedsid\ted.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\vic\soloud_vic.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\vizsn\soloud_vizsn.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\wav\dr_impl.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\wav\soloud_wav.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\wav\soloud_wavstream.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\audiosource\wav\stb_vorbis.c" />
+    <ClCompile Include="Source\External\SoLoud\src\backend\sdl\soloud_sdl1.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\backend\sdl\soloud_sdl1_dll.c" />
+    <ClCompile Include="Source\External\SoLoud\src\backend\sdl\soloud_sdl2.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\backend\sdl\soloud_sdl2_dll.c" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_audiosource.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_bus.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_core_3d.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_core_basicops.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_core_faderops.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_core_filterops.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_core_getters.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_core_setters.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_core_voicegroup.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_core_voiceops.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_fader.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_fft.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_fft_lut.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_file.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_filter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_misc.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_queue.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\core\soloud_thread.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\c_api\soloud_c.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_bassboostfilter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_biquadresonantfilter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_dcremovalfilter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_echofilter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_fftfilter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_flangerfilter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_freeverbfilter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_lofifilter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_robotizefilter.cpp" />
+    <ClCompile Include="Source\External\SoLoud\src\filter\soloud_waveshaperfilter.cpp" />
+    <ClCompile Include="Source\Framework\App.cpp" />
+    <ClCompile Include="Source\Framework\AssetsManager.cpp" />
+    <ClCompile Include="Source\Framework\Audio.cpp" />
+    <ClCompile Include="Source\Framework\AudioSystem.cpp" />
+    <ClCompile Include="Source\Framework\Button.cpp" />
+    <ClCompile Include="Source\Framework\Camera.cpp" />
+    <ClCompile Include="Source\Framework\Checkbox.cpp" />
+    <ClCompile Include="Source\Framework\Defs.cpp" />
+    <ClCompile Include="Source\Framework\Easing.cpp" />
+    <ClCompile Include="Source\Framework\Font.cpp" />
+    <ClCompile Include="Source\Framework\GuiManager.cpp" />
+    <ClCompile Include="Source\Framework\Image.cpp" />
+    <ClCompile Include="Source\Framework\InitialScene.cpp" />
+    <ClCompile Include="Source\Framework\Input.cpp" />
+    <ClCompile Include="Source\Framework\LightTimer.cpp" />
+    <ClCompile Include="Source\Framework\Main.cpp" />
+    <ClCompile Include="Source\Framework\Maths.cpp" />
+    <ClCompile Include="Source\Framework\Mixer.cpp" />
+    <ClCompile Include="Source\Framework\PerfTimer.cpp" />
+    <ClCompile Include="Source\Framework\ProgressManager.cpp" />
+    <ClCompile Include="Source\Framework\Random.cpp" />
+    <ClCompile Include="Source\Framework\Render.cpp" />
+    <ClCompile Include="Source\Framework\Scene.cpp" />
+    <ClCompile Include="Source\Framework\SceneManager.cpp" />
+    <ClCompile Include="Source\Framework\Slider.cpp" />
+    <ClCompile Include="Source\Framework\Text.cpp" />
+    <ClCompile Include="Source\Framework\Texture.cpp" />
+    <ClCompile Include="Source\Framework\Window.cpp" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_audiosource.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_bassboostfilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_biquadresonantfilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_bus.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_c.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_dcremovalfilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_echofilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_error.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_fader.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_fft.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_fftfilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_file.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_file_hack_off.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_file_hack_on.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_filter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_flangerfilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_freeverbfilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_internal.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_lofifilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_misc.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_monotone.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_noise.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_openmpt.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_queue.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_robotizefilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_sfxr.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_speech.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_tedsid.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_thread.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_vic.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_vizsn.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_wav.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_waveshaperfilter.h" />
+    <ClInclude Include="Source\External\SoLoud\include\soloud_wavstream.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\speech\darray.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\speech\klatt.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\speech\resonator.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\speech\tts.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\tedsid\sid.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\tedsid\ted.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\wav\dr_flac.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\wav\dr_mp3.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\wav\dr_wav.h" />
+    <ClInclude Include="Source\External\SoLoud\src\audiosource\wav\stb_vorbis.h" />
+    <ClInclude Include="Source\Framework\Action.h" />
+    <ClInclude Include="Source\Framework\Alignment.h" />
+    <ClInclude Include="Source\Framework\Animation.h" />
+    <ClInclude Include="Source\Framework\App.h" />
+    <ClInclude Include="Source\Framework\Array.h" />
+    <ClInclude Include="Source\Framework\Asset.h" />
+    <ClInclude Include="Source\Framework\AssetsManager.h" />
+    <ClInclude Include="Source\Framework\AssetType.h" />
+    <ClInclude Include="Source\Framework\Audio.h" />
+    <ClInclude Include="Source\Framework\AudioSystem.h" />
+    <ClInclude Include="Source\Framework\Button.h" />
+    <ClInclude Include="Source\Framework\Camera.h" />
+    <ClInclude Include="Source\Framework\Checkbox.h" />
+    <ClInclude Include="Source\Framework\Circle.h" />
+    <ClInclude Include="Source\Framework\Control.h" />
+    <ClInclude Include="Source\Framework\ControlCreation.h" />
+    <ClInclude Include="Source\Framework\ControlEnums.h" />
+    <ClInclude Include="Source\Framework\ControlSettings.h" />
+    <ClInclude Include="Source\Framework\Defs.h" />
+    <ClInclude Include="Source\Framework\Easing.h" />
+    <ClInclude Include="Source\Framework\Flag.h" />
+    <ClInclude Include="Source\Framework\Font.h" />
+    <ClInclude Include="Source\Framework\Grid.h" />
+    <ClInclude Include="Source\Framework\GuiManager.h" />
+    <ClInclude Include="Source\Framework\ID.h" />
+    <ClInclude Include="Source\Framework\Image.h" />
+    <ClInclude Include="Source\Framework\InitialScene.h" />
+    <ClInclude Include="Source\Framework\Input.h" />
+    <ClInclude Include="Source\Framework\LightTimer.h" />
+    <ClInclude Include="Source\Framework\Map.h" />
+    <ClInclude Include="Source\Framework\Maths.h" />
+    <ClInclude Include="Source\Framework\Mixer.h" />
+    <ClInclude Include="Source\Framework\Module.h" />
+    <ClInclude Include="Source\Framework\PerfTimer.h" />
+    <ClInclude Include="Source\Framework\Point.h" />
+    <ClInclude Include="Source\Framework\ProgressManager.h" />
+    <ClInclude Include="Source\Framework\Random.h" />
+    <ClInclude Include="Source\Framework\Ray.h" />
+    <ClInclude Include="Source\Framework\Rect.h" />
+    <ClInclude Include="Source\Framework\Render.h" />
+    <ClInclude Include="Source\Framework\Scene.h" />
+    <ClInclude Include="Source\Framework\SceneManager.h" />
+    <ClInclude Include="Source\Framework\Slider.h" />
+    <ClInclude Include="Source\Framework\Text.h" />
+    <ClInclude Include="Source\Framework\Texture.h" />
+    <ClInclude Include="Source\Framework\Trigger.h" />
+    <ClInclude Include="Source\Framework\Vector.h" />
+    <ClInclude Include="Source\Framework\Window.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Source\External\SoLoud\src\audiosource\speech\Elements.def" />
+    <None Include="Source\External\SoLoud\src\c_api\soloud.def" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
