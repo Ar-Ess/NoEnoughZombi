@@ -537,6 +537,9 @@
     <ClInclude Include="Source\Tile.h">
       <Filter>Game</Filter>
     </ClInclude>
+    <ClInclude Include="Source\GameDefs.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="External">

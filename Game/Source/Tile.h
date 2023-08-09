@@ -2,6 +2,8 @@
 
 #include "Rect.h"
 
+class Render;
+
 class Tile
 {
 public:
@@ -10,9 +12,12 @@ public:
 
 	~Tile();
 
-	void Draw(bool debug);
+	void Init(Point position);
+
+	void Draw(bool debug, Render* render);
 
 private:
 
+	Point position;
 
 };

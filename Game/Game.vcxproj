@@ -270,6 +270,7 @@
     <ClInclude Include="Source\Framework\Trigger.h" />
     <ClInclude Include="Source\Framework\Vector.h" />
     <ClInclude Include="Source\Framework\Window.h" />
+    <ClInclude Include="Source\GameDefs.h" />
     <ClInclude Include="Source\GameScene.h" />
     <ClInclude Include="Source\MainMenuScene.h" />
     <ClInclude Include="Source\Tile.h" />

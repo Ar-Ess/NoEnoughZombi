@@ -564,7 +564,7 @@ public:
     // Clean the structure. Return to a 0 by 0 grid
     bool CleanUp()
     {
-        for (unsigned int i = 0; i < height: ++i)
+        for (unsigned int i = 0; i < height; ++i)
         {
             GetRow(i)->CleanUp();
         }
@@ -632,6 +632,24 @@ public:
         size--;
 
         return true;
+    }
+
+    void Complete(T base)
+    {
+        grid->Iterate<T>
+        (
+            base,
+            [](Row* r, T b)
+            {
+                for (unsigned int i = 0; i < r->row.Size(); ++i)
+                {
+                    r->SetValue(new T(b), i);
+                    r->size++;
+                }
+            }
+        );
+
+        size = width * height;
     }
 
 private:

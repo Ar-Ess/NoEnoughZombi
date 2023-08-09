@@ -3,14 +3,16 @@
 #include "Render.h"
 #include "AssetsManager.h"
 #include "Tile.h"
-
-#define TILE_SIZE 112
-#define TILE_W_COUNT 9
-#define TILE_H_COUNT 5
+#include "GameDefs.h"
 
 GameScene::GameScene()
 {
 	grid = new Grid<Tile*>(TILE_W_COUNT, TILE_H_COUNT);
+	grid->Complete(Tile());
+	for (unsigned int x = 0; x < grid->Width(); ++x)
+		for (unsigned int y = 0; y < grid->Heigth(); ++y)
+			grid->At(x, y)->Init(Point((int)x, y));
+
 }
 
 GameScene::~GameScene()
@@ -57,8 +59,11 @@ void GameScene::DrawGame()
 {
 
 	render->DrawTexture(garden, {}, {1, 1});
-	render->DrawGrid({ 150, 130, TILE_SIZE * TILE_W_COUNT, TILE_SIZE * TILE_H_COUNT }, { TILE_W_COUNT, TILE_H_COUNT }, {255, 255, 255, 230});
+	render->DrawGrid({ TILE_OFFSET, TILE_SIZE * TILE_W_COUNT, TILE_SIZE * TILE_H_COUNT }, { TILE_W_COUNT, TILE_H_COUNT }, {255, 255, 255, 230});
 
-	for (unsigned int i = 0; i < grid->Size(); ++i) (*grid)[i]->Draw(true);
+	for (unsigned int i = 0; i < grid->Size(); ++i)
+	{
+		(*grid)[i]->Draw(true, render);
+	}
 
 }
