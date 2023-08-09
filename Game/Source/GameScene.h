@@ -1,8 +1,10 @@
 #pragma once
 
 #include "Scene.h"
+#include "Grid.h"
 
 class Texture;
+class Tile;
 
 class GameScene : public Scene
 {
@@ -31,5 +33,6 @@ private:
 private:
 
 	Texture* garden = nullptr;
+	Grid<Tile*>* grid = nullptr;
 
 };

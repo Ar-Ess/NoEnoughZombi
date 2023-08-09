@@ -246,6 +246,9 @@
     <ClCompile Include="Source\GameScene.cpp">
       <Filter>Scenes</Filter>
     </ClCompile>
+    <ClCompile Include="Source\Tile.cpp">
+      <Filter>Game</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Source\External\SoLoud\include\soloud.h">
@@ -531,6 +534,9 @@
     <ClInclude Include="Source\GameScene.h">
       <Filter>Scenes</Filter>
     </ClInclude>
+    <ClInclude Include="Source\Tile.h">
+      <Filter>Game</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="External">
@@ -571,6 +577,12 @@
     </Filter>
     <Filter Include="AudioSystem">
       <UniqueIdentifier>{89f13b6e-c98e-403e-9163-8feb6b26c6d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game">
+      <UniqueIdentifier>{1e9a43cb-d8ce-4820-a3ab-0701fcf83560}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Game\Plants">
+      <UniqueIdentifier>{a518f9c8-f629-49fd-a4e9-34d349283a79}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

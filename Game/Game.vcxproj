@@ -176,6 +176,7 @@
     <ClCompile Include="Source\Framework\Window.cpp" />
     <ClCompile Include="Source\GameScene.cpp" />
     <ClCompile Include="Source\MainMenuScene.cpp" />
+    <ClCompile Include="Source\Tile.cpp" />
     <ClInclude Include="Source\External\SoLoud\include\soloud.h" />
     <ClInclude Include="Source\External\SoLoud\include\soloud_audiosource.h" />
     <ClInclude Include="Source\External\SoLoud\include\soloud_bassboostfilter.h" />
@@ -271,6 +272,7 @@
     <ClInclude Include="Source\Framework\Window.h" />
     <ClInclude Include="Source\GameScene.h" />
     <ClInclude Include="Source\MainMenuScene.h" />
+    <ClInclude Include="Source\Tile.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Source\External\SoLoud\src\audiosource\speech\Elements.def" />
